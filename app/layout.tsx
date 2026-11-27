@@ -1,17 +1,13 @@
 import type { Metadata } from "next"
 
-import { cn } from "@workspace/ui/lib/utils"
-import { attributeRootLayoutRequest } from "@workspace/otel/layout"
-import "@workspace/ui/globals.css"
-import {
-  BottomCorners,
-  LegalLinks,
-  TopCorners,
-} from "@workspace/ui/components/corners"
-import { fontVariables } from "@workspace/ui/lib/fonts"
-import { NextPageDecode } from "@workspace/ui/components/page-decode-next"
-import { ThemeProvider } from "@workspace/ui/components/theme-provider"
-import { TooltipProvider } from "@workspace/ui/components/ui/tooltip"
+import { cn } from "@/lib/utils"
+import { attributeRootLayoutRequest } from "@/lib/otel/layout"
+import "@/styles/globals.css"
+import { BottomCorners, LegalLinks, TopCorners } from "@/components/corners"
+import { fontVariables } from "@/lib/fonts"
+import { NextPageDecode } from "@/components/page-decode-next"
+import { ThemeProvider } from "@/components/theme-provider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 import { SITE_DESC, SITE_NAME, SITE_TITLE } from "@/lib/site"
 

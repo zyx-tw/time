@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
-import { RequestedPath } from "@workspace/ui/components/shell"
-import { StatusPage } from "@workspace/ui/components/status-page"
-import { cn } from "@workspace/ui/lib/utils"
-import { column, enterRow } from "@workspace/ui/lib/layout"
+import { RequestedPath } from "@/components/shell"
+import { StatusPage } from "@/components/status-page"
+import { cn } from "@/lib/utils"
+import { column, enterRow } from "@/lib/layout"
 
 // The layout's Open Graph and Twitter cards describe the home page, url
 // included, so a missing page drops them.
