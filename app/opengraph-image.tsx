@@ -5,7 +5,7 @@ import {
   OG_CONTENT_TYPE,
   OG_SIZE,
   ZyxOgImage,
-} from "@workspace/ui/components/og-image"
+} from "@/components/og-image"
 
 export const alt = OG_ALT
 export const size = OG_SIZE

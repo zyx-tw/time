@@ -4,10 +4,8 @@ const nextConfig = {
   ...(process.env.NEXT_OUTPUT === "standalone"
     ? {
         output: "standalone",
-        outputFileTracingRoot: new URL("../..", import.meta.url).pathname,
       }
     : {}),
-  transpilePackages: ["@workspace/otel", "@workspace/ui"],
 }
 
 export default nextConfig
