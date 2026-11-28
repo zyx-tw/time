@@ -6,7 +6,6 @@ import "@/styles/globals.css"
 import { BottomCorners, LegalLinks, TopCorners } from "@/components/corners"
 import { fontVariables } from "@/lib/fonts"
 import { NextPageDecode } from "@/components/page-decode-next"
-import { ThemeProvider } from "@/components/theme-provider"
 import { TooltipProvider } from "@/components/ui/tooltip"
 
 import { SITE_DESC, SITE_NAME, SITE_TITLE } from "@/lib/site"
@@ -44,20 +43,14 @@ export default async function RootLayout({
   await attributeRootLayoutRequest()
 
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("dark", "antialiased", fontVariables, "font-sans")}
-    >
+    <html lang="en" className={cn("antialiased", fontVariables, "font-sans")}>
       <body className="select-none">
-        <ThemeProvider>
-          <NextPageDecode />
-          <TooltipProvider>
-            <TopCorners trail={[{ label: "TIME" }]} />
-            {children}
-            <BottomCorners links={<LegalLinks />} />
-          </TooltipProvider>
-        </ThemeProvider>
+        <NextPageDecode />
+        <TooltipProvider>
+          <TopCorners trail={[{ label: "TIME" }]} />
+          {children}
+          <BottomCorners links={<LegalLinks />} />
+        </TooltipProvider>
       </body>
     </html>
   )
